@@ -13,6 +13,7 @@ def main():
     # Path to your Excel file
     file_path = 'trades.xlsx'
 
+
     # Check if file exists and is accessible
     if not os.path.isfile(file_path):
         print(f"File not found: {file_path}")
