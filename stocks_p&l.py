@@ -13,7 +13,7 @@ def main():
     file_path = 'trades.xlsx'
 
     try:
-        # Read trades from Excel file
+        # Read trades from Excel file into a DataFrame
         trades_df = pd.read_excel(file_path)
         print("Excel file read successfully.")
 
@@ -30,7 +30,7 @@ def main():
     trades_df['Accumulated Profit/Loss'] = trades_df.groupby('Date')['Profit/Loss'].cumsum()
 
     # Save the updated DataFrame back to Excel
-    output_file = 'updated_trades.xlsx'
+    output_file = 'daily_p&l.xlsx'
     trades_df.to_excel(output_file, index=False)
     print(f"Updated trades data saved to {output_file}")
 
